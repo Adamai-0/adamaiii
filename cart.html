@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дисконтная карта</title>
+<style>
+    /* Стили для хедера */
+    header {
+    background-color: #333; /* Цвет фона хедера */
+    color: #fff; /* Цвет текста в хедере */
+    padding: 20px; /* Отступы внутри хедера */
+    text-align: center; /* Выравнивание текста по центру */
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; /* Размещение хедера сверху страницы */
+    width: 100%; /* Ширина хедера на всю ширину страницы */
+}
+
+header h1 {
+    margin: 0; /* Убираем внешние отступы у заголовка */
+}
+
+nav {
+    margin-top: 10px; /* Отступ сверху для навигации */
+}
+
+nav a {
+    color: #fff; /* Цвет ссылок в навигации */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    margin: 0 10px; /* Отступы между ссылками */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Чтобы избежать появления горизонтального скролла */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Мой Интернет-магазин</h1>
+<nav>
+    <a href="glaf.html">Главная</a>
+    <a href="index.html">Витрина</a>
+    <a href="praci.html">Прайс</a>
+    <a href="index1.html">Каталог</a>
+    <a href="cart.html">Дисконтная карта</a>
+
+</nav>
+</header>
+
+<div class="form-container">
+    <h2>Заполните данные для дисконтной карты</h2>
+    <form id="discountForm">
+        <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender">
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('discountForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const data = {};
+        for (const [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        console.log(data); // Здесь можно отправить данные на сервер или обработать их как угодно
+        this.reset(); // Очистка формы после отправки
+    });
+</script>
+
+</body>
+</html>

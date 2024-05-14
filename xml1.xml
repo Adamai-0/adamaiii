@@ -1,0 +1,182 @@
+<MAGAZIN>
+    <product>
+        <id>1</id>
+        <name>Casio G-Shock GA-2100-1AER</name>
+        <category>Часы</category>
+        <material>Серебряный</material>
+        <size>36,8х33,2х8,2мм</size>
+        <description>Это мужские часы из коллекции Collection Vintage. Водозащита до 30 метров.</description>
+        <price>5990</price>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Casio G-Shock GM-5600B-1ER</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>48,9x42,8x13,4 мм</size>
+        <description>Ударопрочные часы с функцией автоматической подсветки. Водонепроницаемость 200 метров.</description>
+        <price>8590</price>
+    </product>
+    <product>
+        <id>3</id>
+        <name>Casio Edifice EF-527D-1AVEF</name>
+        <category>Часы</category>
+        <material>Серебряный</material>
+        <size>48,5x43,8x10,8 мм</size>
+        <description>Мужские часы с хронографом и минеральным стеклом. Водонепроницаемость 100 метров.</description>
+        <price>7490</price>
+    </product>
+    <product>
+        <id>4</id>
+        <name>Casio Pro Trek PRG-600-1ER</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>51,5x47,6x12,6 мм</size>
+        <description>Профессиональные спортивные часы с компасом, барометром и термометром. Водонепроницаемость 100 метров.</description>
+        <price>12990</price>
+    </product>
+    <product>
+        <id>5</id>
+        <name>Casio Baby-G BA-110BC-1A</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>46,3x43,4x15,8 мм</size>
+        <description>Женские спортивные часы с эффектной подсветкой и защитой от ударов. Водонепроницаемость 100 метров.</description>
+        <price>4990</price>
+    </product>
+    <product>
+        <id>6</id>
+        <name>Casio Collection W-800H-1AVES</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>43,7x41,4x10,9 мм</size>
+        <description>Надежные и удобные цифровые часы с функциями хронометра и таймера. Водонепроницаемость 100 метров.</description>
+        <price>2290</price>
+    </product>
+    <product>
+        <id>7</id>
+        <name>Casio Classic MTP-V001GL-1B</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>39,0x34,0x8,6 мм</size>
+        <description>Классические мужские часы с кожаным ремешком. Надежные и стильные.</description>
+        <price>2490</price>
+    </product>
+    <product>
+        <id>8</id>
+        <name>Casio Youth MW-240-1BVEF</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>47,9x41,0x12,3 мм</size>
+        <description>Простые и надежные мужские часы с классическим дизайном. Идеальный вариант для повседневного использования.</description>
+        <price>1490</price>
+    </product>
+    <product>
+        <id>9</id>
+        <name>Casio Sheen SHE-3059SG-7A</name>
+        <category>Часы</category>
+        <material>Серебряный</material>
+        <size>37,0x30,3x9,0 мм</size>
+        <description>Женские часы с кристаллами Swarovski на циферблате. Элегантный и изысканный дизайн.</description>
+        <price>8490</price>
+    </product>
+    <product>
+        <id>10</id>
+        <name>Casio Data Bank DB-360N-1AEF</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>38,2x36,5x9,1 мм</size>
+        <description>Цифровые часы с функцией хранения данных и калькулятором. Удобны и практичны в использовании.</description>
+        <price>2990</price>
+    </product>
+    <product>
+        <id>11</id>
+        <name>Casio Retro LA680WEGA-1ER</name>
+        <category>Часы</category>
+        <material>Золотой</material>
+        <size>33,0x28,6x8,6 мм</size>
+        <description>Женские наручные часы в ретро стиле с циферблатом золотистого цвета. Очарование в каждой детали.</description>
+        <price>4490</price>
+    </product>
+    <product>
+        <id>12</id>
+        <name>Casio Collection F-91W-1YER</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>37,5x33,5x8,5 мм</size>
+        <description>Легкие и прочные мужские часы с классическим дизайном. Идеально подходят для повседневного использования.</description>
+        <price>990</price>
+    </product>
+    <product>
+        <id>13</id>
+        <name>Casio Youth MW-240-4BVEF</name>
+        <category>Часы</category>
+        <material>Красный</material>
+        <size>47,9x41,0x12,3 мм</size>
+        <description>Яркие и стильные мужские часы с красным ремешком. Отличный акцент для вашего образа.</description>
+        <price>1490</price>
+    </product>
+    <product>
+        <id>14</id>
+        <name>Casio Youth MW-240-2BVEF</name>
+        <category>Часы</category>
+        <material>Синий</material>
+        <size>47,9x41,0x12,3 мм</size>
+        <description>Мужские часы с синим ремешком, подходящие для спортивного и повседневного стиля.</description>
+        <price>1490</price>
+    </product>
+    <product>
+        <id>15</id>
+        <name>Casio Classic MTP-1302PD-1A2VDF</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>47,9x41,0x12,3 мм</size>
+        <description>Классические мужские часы с минималистичным дизайном и кожаным ремешком. Стиль и элегантность в каждой детали.</description>
+        <price>1990</price>
+    </product>
+    <product>
+        <id>16</id>
+        <name>Casio Collection W-218H-4B2VEF</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>46,8x40,0x13,5 мм</size>
+        <description>Простые и надежные мужские часы с красными элементами. Идеальный выбор для активного образа жизни.</description>
+        <price>1690</price>
+    </product>
+    <product>
+        <id>17</id>
+        <name>Casio Collection MTP-1240D-7BDF</name>
+        <category>Часы</category>
+        <material>Серебряный</material>
+        <size>47,9x41,0x12,3 мм</size>
+        <description>Мужские классические часы с серебристым циферблатом и металлическим браслетом. Идеальный выбор для делового стиля.</description>
+        <price>2790</price>
+    </product>
+    <product>
+        <id>18</id>
+        <name>Casio Edifice EF-527D-1AVEF</name>
+        <category>Часы</category>
+        <material>Серебряный</material>
+        <size>48,5x43,8x10,8 мм</size>
+        <description>Мужские часы с хронографом и минеральным стеклом. Водонепроницаемость 100 метров.</description>
+        <price>7490</price>
+    </product>
+    <product>
+        <id>19</id>
+        <name>Casio Collection W-800H-1AVES</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>43,7x41,4x10,9 мм</size>
+        <description>Надежные и удобные цифровые часы с функциями хронометра и таймера. Водонепроницаемость 100 метров.</description>
+        <price>2290</price>
+    </product>
+    <product>
+        <id>20</id>
+        <name>Casio Classic MTP-V001GL-1B</name>
+        <category>Часы</category>
+        <material>Черный</material>
+        <size>39,0x34,0x8,6 мм</size>
+        <description>Классические мужские часы с кожаным ремешком. Надежные и стильные.</description>
+        <price>2490</price>
+    </product>
+</MAGAZIN>

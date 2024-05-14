@@ -1,0 +1,189 @@
+<html>
+<head>
+  <title>Карточка товара</title>
+  <link rel="stylesheet" type="text/css" href="product.css">
+  <style>
+    /* Дополнительные стили для рейтинга звезд */
+    .rating {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .rating span {
+      font-size: 24px;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.25s;
+    }
+
+    .rating span:hover,
+    .rating span:hover ~ span {
+      color: #ffbf00;
+    }
+
+    /* Стили для отзывов */
+    .reviews {
+      margin-top: 20px;
+    }
+
+    .review {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .review p {
+      margin: 5px 0;
+    }
+
+    /* Стили для формы отзыва */
+    .review-form {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+
+    .review-form input[type="text"],
+    .review-form input[type="number"],
+    .review-form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .review-form button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Карточка товара</h1>
+    <div class="card">
+      <img id="mainImage" src="image/2.jpg" onmouseover="changeImage('image/2_alt.jpg')" onmouseout="changeImage('image/2.jpg')">
+      <p>ID - 02</p>
+      <p>Название - CASIO G-Shock GA-2100-1AER</p>
+      <p>Цена - 17 990</p>
+      <p>Категория - Стулья</p>
+      <p>Материал - Полимер</p>
+      <p>Размер - 36,8х33,2х8,2мм</p>
+      <p>Описание - Кварцевые Электронные наручные часы CASIO из коллекции G-Shock имеют Минеральное стекло</p>
+      <div class="rating" id="rating">
+        <span onclick="rateProduct(1)">☆</span>
+        <span onclick="rateProduct(2)">☆</span>
+        <span onclick="rateProduct(3)">☆</span>
+        <span onclick="rateProduct(4)">☆</span>
+        <span onclick="rateProduct(5)">☆</span>
+      </div>
+    </div>
+     <!-- Контейнер для отзывов -->
+     <div class="reviews" id="reviewsContainer">
+      <!-- Отзывы других пользователей будут добавляться сюда динамически -->
+    </div>
+
+    <!-- Форма для оставления отзыва -->
+    <div class="review-form">
+      <h2>Оставить отзыв</h2>
+      <input type="text" id="userName" placeholder="Ваше имя">
+      <input type="number" id="userRating" placeholder="Рейтинг (от 1 до 5)">
+      <textarea id="userReview" placeholder="Ваш отзыв"></textarea>
+      <button onclick="submitReview()">Отправить отзыв</button>
+    </div>
+
+    <button onclick="goBack()" class="back-button">Назад</button>
+  </div>
+
+  <script>
+    // Массив для хранения отзывов
+    let reviews = [
+      { text: 'Хорошие часы', rating: 5 },
+      { text: 'Не очень', rating: 2 },
+      { text: 'Классная компания', rating: 4 }
+    ];
+
+    // Функция для изменения изображения при наведении
+    function changeImage(newSrc) {
+      document.getElementById('mainImage').src = newSrc;
+    }
+
+    // Переменная для хранения значения рейтинга
+    let ratingValue = 0;
+
+    // Функция для установки рейтинга товара
+    function rateProduct(rating) {
+      ratingValue = rating;
+      const stars = document.querySelectorAll('.rating span');
+      stars.forEach((star, index) => {
+        if (index < rating) {
+          star.textContent = '★';
+        } else {
+          star.textContent = '☆';
+        }
+      });
+    }
+
+    // Функция для обновления отображения отзывов
+    function updateReviews() {
+      // Очищаем контейнер для отзывов
+      const reviewsContainer = document.getElementById('reviewsContainer');
+      reviewsContainer.innerHTML = '';
+
+      // Отображаем только последние три отзыва
+      const recentReviews = reviews.slice(0, 3);
+
+      // Добавляем отзывы в контейнер
+      recentReviews.forEach(review => {
+        const reviewElement = document.createElement('div');
+        reviewElement.classList.add('review');
+        reviewElement.innerHTML = `<p>${review.text}</p><p>Рейтинг: ${review.rating}</p>`;
+        reviewsContainer.appendChild(reviewElement);
+      });
+    }
+
+    // Вызываем функцию для первоначального отображения отзывов
+    updateReviews();
+
+    // Функция для отправки отзыва
+    function submitReview() {
+      const userName = document.getElementById('userName').value;
+      const userRating = parseInt(document.getElementById('userRating').value);
+      const userReview = document.getElementById('userReview').value;
+
+      // Проверяем, что все поля заполнены
+      if (!userName || !userRating || !userReview) {
+        alert('Пожалуйста, заполните все поля.');
+        return;
+      }
+
+      // Проверяем правильность введенного рейтинга
+      if (userRating < 1 || userRating > 5) {
+        alert('Рейтинг должен быть от 1 до 5.');
+        return;
+      }
+
+      // Добавляем новый отзыв в массив
+      reviews.unshift({ text: userReview, rating: userRating });
+
+      // Обновляем отображение отзывов
+      updateReviews();
+
+      // Очищаем поля формы
+      document.getElementById('userName').value = '';
+      document.getElementById('userRating').value = '';
+      document.getElementById('userReview').value = '';
+
+      // Подтверждение отправки отзыва
+      alert('Спасибо за ваш отзыв!');
+    }
+
+    // Функция для перехода назад
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

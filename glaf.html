@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Рекламный баннер</title>
+<style>
+    /* Стили для хедера */
+    header {
+    background-color: #333; /* Цвет фона хедера */
+    color: #fff; /* Цвет текста в хедере */
+    padding: 20px; /* Отступы внутри хедера */
+    text-align: center; /* Выравнивание текста по центру */
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; /* Размещение хедера сверху страницы */
+    width: 100%; /* Ширина хедера на всю ширину страницы */
+}
+
+header h1 {
+    margin: 0; /* Убираем внешние отступы у заголовка */
+}
+
+nav {
+    margin-top: 10px; /* Отступ сверху для навигации */
+}
+
+nav a {
+    color: #fff; /* Цвет ссылок в навигации */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    margin: 0 10px; /* Отступы между ссылками */
+}
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Чтобы избежать появления горизонтального скролла */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .banner {
+    width: 150%; /* Увеличиваем ширину баннера в 1.5 раза */
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Выравниваем по центру по горизонтали */
+}
+
+    .banner img {
+        width: auto;
+        height: 100%;
+        position: absolute; /* Абсолютное позиционирование для наложения изображений друг на друга */
+        opacity: 0; /* Начальная прозрачность */
+        animation: fadeInOut 15s infinite; /* Анимация смены изображений */
+    }
+
+    /* Анимация для появления и исчезновения изображений */
+    @keyframes fadeInOut {
+        0%, 20% { opacity: 0; }
+        25%, 45% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+    }
+
+    /* Задержка для каждого изображения */
+    .banner img:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .banner img:nth-child(2) {
+        animation-delay: 3s;
+    }
+    .banner img:nth-child(3) {
+        animation-delay: 6s;
+    }
+    .banner img:nth-child(4) {
+        animation-delay: 9s;
+    }
+    .banner img:nth-child(5) {
+        animation-delay: 12s;
+    }
+    
+    /* Стили для раздела о компании */
+    .company-info {
+        background-color: #f4f4f4; /* Цвет фона раздела */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .company-info h2 {
+        color: #333; /* Цвет текста */
+        margin-bottom: 10px;
+    }
+
+    .company-info p {
+        color: #666; /* Цвет текста */
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<header>
+<h1>Мой Интернет-магазин</h1>
+<nav>
+    <a href="glaf.html">Главная</a>
+    <a href="index.html">Витрина</a>
+    <a href="praci.html">Прайс</a>
+    <a href="index1.html">Каталог</a>
+    <a href="cart.html">Дисконтная карта</a>
+</nav>
+</header>
+<div class="banner">
+    <img src="image/1.jpg" alt="Advertisement Image 1">
+    <img src="image/2.jpg" alt="Advertisement Image 2">
+    <img src="image/2_alt.jpg" alt="Advertisement Image 3">
+    <img src="image/3.jpg" alt="Advertisement Image 4">
+    <img src="image/4.jpg" alt="Advertisement Image 5">
+</div>
+
+<!-- Раздел о компании -->
+<div class="company-info">
+    <h2>О Компании Romchas</h2>
+    <p>Основатель: Роман, 19 лет</p>
+    <p>Студент ДГТУ</p>
+    <p>Мы продаем часы</p>
+</div>
+</body>
+</html>
